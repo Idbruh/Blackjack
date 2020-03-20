@@ -1,11 +1,3 @@
-# fazer um metodo para criar o baralho - ok
-# criar um metodo que define o numero de rodadas - ok
-# criar um metodo que define a quantidade de jogadores e verifica o numero máximo - ok
-# criar um metodo que salva o baralho tanto do dealer qt do jogador
-# criar um metodo para verificar o ace - ok
-# criar um metodo para verificar quem ganhou
-# criar metodo de regras do dealer
-# criar um metodo para tratar as informações retornadas do dicionario
 from random import shuffle
 
 
@@ -23,7 +15,6 @@ class Blackjack:
         self.dealer_hand = []
         self.player_hand = []
 
-    # the game runs
     def comecar_jogo(self):
         self.opc = self.game_menu()
         self.n_player = self.num_player()
@@ -60,9 +51,7 @@ class Blackjack:
                                                         Good Luck!
 
 ♠ ♡ ♢ ♣ . ♠ ♡ ♢ ♣ . ♠ ♡ ♢ ♣ . ♠ ♡ ♢ ♣ . ♠ ♡ ♢ ♣ . ♠ ♡ ♢ ♣ . ♠ ♡ ♢ ♣ . ♠ ♡ ♢ ♣ . ♠ ♡ ♢ ♣ . ♠ ♡ ♢ ♣ . ♠ ♡ ♢ ♣ . ♠ ♡ ♢ ♣ .
-═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
-        
-        ''')
+═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════        ''')
 
     def deck(self):
         self.deck = []
@@ -73,7 +62,7 @@ class Blackjack:
         return self.deck
 
     def num_player(self):
-        n_player = int(input('\n\nInform the number of players.  1-6\n\n» '))
+        n_player = int(input('\nInform the number of players.  1-6\n» '))
         while n_player > 6:
             print("The total number of players cannot be higher than 6. You must have a dealer in this game!\n")
             n_player = int(input('Inform the number of players.  1-6\n\n» '))
